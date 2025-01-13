@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>S.M.K Institute of Nursing Shikarpur</title>
+  <link rel="stylesheet" href="../assets/fontawesome/css/all.min.css" />
+  <script src="../assets/fontawesome/js/all.min.js" type="application/javascript" defer></script>
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="shortcut icon" href="../images/logo_round.png" type="image/x-icon" />
+  <link rel="stylesheet" href="../assets/css/dataTables.dataTables.css"/>
+  <link href="../assets/css/main.min.css" rel="stylesheet"/>
+  <script src="../assets/js/iziToast.min.js" type="application/javascript" defer></script>
+  <link rel="stylesheet" href="../assets/css/iziToast.css"/>
+  <link rel="stylesheet" href="../assets/css/iziToast.min.css"/>
+  <script src="../assets/js/jquery-3.6.0.min.js"></script>
+  <script src="../assets/js/dataTables.js" type="application/javascript" defer></script>
+  <script src="../assets/js/bootstrap.bundle.min.js" type="application/javascript" defer></script>
+  <script src="../assets/js/script.js" type="application/javascript" defer></script>
+  <script src="../assets/js/forms.js" type="application/javascript" defer></script>
+  <script src="../assets/js/charts/index.js"></script>
+  <script src="../assets/js/charts/percent.js"></script>
+  <script src="../assets/js/charts/Animated.js"></script>
+  <script src="../assets/js/charts/xy.js"></script>
+  <script>
+    $(document).ready(function ()
+    {
+      $("#myTable").DataTable();
+    });
+
+
+  </script>
+  <style>
+    @media (max-width: 768px) {
+      .fc-toolbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .fc-toolbar .fc-toolbar-chunk {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+      .fc-toolbar-title {
+        font-size: 1.2rem;
+      }
+      .fc-button {
+        font-size: 0.8rem;
+        padding: 0.2rem 0.5rem;
+      }
+      .fc-daygrid-day-number {
+        font-size: 0.8rem;
+      }
+      .fc-daygrid-event {
+        font-size: 0.7rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+  <aside id="sidebar" class="expand">
+    <div class="d-flex justify-content-center align-items-center">
+      <!-- Sidebar Logo -->
+
+      <button class="sidebar-logo text-center toggle-btn" type="button" title="Toggle Sidebar">
+        <img
+                src="../images/logo.png"
+                alt="Applied Logo"
+                class="img-fluid logo"
+        />
+      </button>
+    </div>
+    <ul class="sidebar-nav" style="padding: 0;text-align: left">
+      <li class="sidebar-item">
+        <a href="../index.html" class="sidebar-link">
+          <i class="fa fa-solid fa-house"></i>
+          <span>Dashboard</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a
+                href="../Finance/fees.html"
+                class="sidebar-link collapsed has-dropdown"
+                data-bs-toggle="collapse"
+                data-bs-target="#finance"
+                aria-expanded="false"
+                aria-controls="finance"
+        >
+          <i class="fa-solid fa-coins"></i>
+          <span>Finance</span>
+        </a>
+        <ul
+                id="finance"
+                class="sidebar-dropdown list-unstyled collapse"
+                data-bs-parent="#sidebar"
+        >
+          <li class="sidebar-item">
+            <a href="../Finance/fees.html" class="sidebar-link">Fees</a>
+          </li>
+          <li class="sidebar-item">
+            <a href="../Finance/income.html" class="sidebar-link">Income</a>
+          </li>
+          <li class="sidebar-item">
+            <a href="../Finance/expenses.html" class="sidebar-link">Expenses</a>
+          </li>
+          <li class="sidebar-item">
+            <a href="../Finance/staff-salary.html" class="sidebar-link"
+            >Staff Salary</a
+            >
+          </li>
+          <li class="sidebar-item">
+            <a href="../Finance/petty-cash.html" class="sidebar-link">Petty Cash</a>
+          </li>
+          <li class="sidebar-item">
+            <a href="../Finance/petty-cash-report.html" class="sidebar-link"
+            >Petty Cash Report</a
+            >
+          </li>
+        </ul>
+      </li>
+      <li class="sidebar-item">
+        <a
+                href="../Users/student-record.html"
+                class="sidebar-link collapsed has-dropdown"
+                data-bs-toggle="collapse"
+                data-bs-target="#user-account"
+                aria-expanded="false"
+                aria-controls="user-account"
+        >
+          <i class="fa-solid fa-graduation-cap"></i>
+          <span>Users</span>
+        </a>
+        <ul
+                id="user-account"
+                class="sidebar-dropdown list-unstyled collapse"
+                data-bs-parent="#sidebar"
+        >
+          <li class="sidebar-item">
+            <a href="../Users/student-record.html" class="sidebar-link"
+            >Students</a
+            >
+          </li>
+          <li class="sidebar-item">
+            <a href="../Users/staff-record.html" class="sidebar-link"
+            >Staff</a
+            >
+          </li>
+          <li class="sidebar-item">
+            <a href="../Users/student-account-information.html" class="sidebar-link"
+            >Student Information</a
+            >
+          </li>
+          <li class="sidebar-item">
+            <a href="../Users/staff-account-information.html" class="sidebar-link"
+            >Staff Information</a
+            >
+          </li>
+          <li class="sidebar-item">
+            <a href="../Users/create-faculty-account.html" class="sidebar-link"
+            >Faculty Account</a
+            >
+          </li>
+        </ul>
+      </li>
+
+      <li class="sidebar-item">
+        <a
+                href="../Attendance/gpr-attendence.html"
+                class="sidebar-link collapsed has-dropdown"
+                data-bs-toggle="collapse"
+                data-bs-target="#attendence"
+                aria-expanded="false"
+                aria-controls="attendence"
+        >
+          <i class="fa-solid fa-clipboard-user"></i>
+          <span>Attendance</span>
+        </a>
+        <ul
+                id="attendence"
+                class="sidebar-dropdown list-unstyled collapse"
+                data-bs-parent="#sidebar"
+        >
+          <li class="sidebar-item">
+            <a href="../Attendance/gpr-attendence.html" class="sidebar-link"
+            >GPR
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="../Attendance/manual-attendence.html" class="sidebar-link"
+            >Manual</a
+            >
+          </li>
+          <li class="sidebar-item">
+            <a href="../Attendance/add-lecture.html" class="sidebar-link">Lecture</a>
+          </li>
+          <li class="sidebar-item">
+            <a href="../Attendance/leave.html" class="sidebar-link">Leave</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="sidebar-item">
+        <a
+                href="../Courses/course.html"
+                class="sidebar-link collapsed has-dropdown"
+                data-bs-toggle="collapse"
+                data-bs-target="#add-view-course"
+                aria-expanded="false"
+                aria-controls="add-view-course"
+        >
+          <i class="fa-solid fa-book-open-reader"></i>
+          <span>Courses</span>
+        </a>
+        <ul
+                id="add-view-course"
+                class="sidebar-dropdown list-unstyled collapse"
+                data-bs-parent="#sidebar"
+        >
+          <li class="sidebar-item">
+            <a href="../Courses/course.html" class="sidebar-link">Add Course</a>
+          </li>
+          <li class="sidebar-item">
+            <a href="../Courses/academic-session.html" class="sidebar-link"
+            >Add Academic Session</a
+            >
+          </li>
+        </ul>
+      </li>
+
+      <li class="sidebar-item">
+        <a
+                href="../SMS/send-individual.html"
+                class="sidebar-link collapsed has-dropdown"
+                data-bs-toggle="collapse"
+                data-bs-target="#sms"
+                aria-expanded="false"
+                aria-controls="sms"
+        >
+          <i class="fa-solid fa-message"></i>
+          <span>SMS</span>
+        </a>
+        <ul
+                id="sms"
+                class="sidebar-dropdown list-unstyled collapse"
+                data-bs-parent="#sidebar"
+        >
+          <li class="sidebar-item">
+            <a href="../SMS/send-individual.html" class="sidebar-link"
+            >Send Individual
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="../SMS/login-information.html" class="sidebar-link"
+            >Login Information</a
+            >
+          </li>
+          <li class="sidebar-item">
+            <a href="../SMS/fees-information.html" class="sidebar-link"
+            >Fees Information</a
+            >
+          </li>
+        </ul>
+      </li>
+
+      <li class="sidebar-item">
+        <a
+                href="../QEC/student-course-evalution.html"
+                class="sidebar-link collapsed has-dropdown"
+                data-bs-toggle="collapse"
+                data-bs-target="#qec"
+                aria-expanded="false"
+                aria-controls="qec"
+        >
+          <i class="fa-solid fa-shield-halved"></i>
+          <span>QEC</span>
+        </a>
+        <ul
+                id="qec"
+                class="sidebar-dropdown list-unstyled collapse"
+                data-bs-parent="#sidebar"
+        >
+          <li class="sidebar-item">
+            <a href="../QEC/student-course-evalution.html" class="sidebar-link"
+            >Student Evaluation</a
+            >
+          </li>
+          <li class="sidebar-item">
+            <a href="../QEC/teacher-evalution.html" class="sidebar-link"
+            >Teacher Evaluation</a
+            >
+          </li>
+          <li class="sidebar-item">
+            <a
+                    href="../QEC/student-course-evalution-report.html"
+                    class="sidebar-link"
+            >Student Evaluation</a
+            >
+          </li>
+          <li class="sidebar-item">
+            <a href="../QEC/teacher-evaluation-report.html"
+               class="sidebar-link"
+            >Teacher Evaluation</a
+            >
+          </li>
+        </ul>
+      </li>
+
+      <li class="sidebar-item">
+        <a
+                href="../Reception/letter-manager.html"
+                class="sidebar-link collapsed has-dropdown"
+                data-bs-toggle="collapse"
+                data-bs-target="#reception"
+                aria-expanded="false"
+                aria-controls="reception"
+        >
+          <i class="fa-solid fa-user-tie"></i>
+          <span>Reception</span>
+        </a>
+        <ul
+                id="reception"
+                class="sidebar-dropdown list-unstyled collapse"
+                data-bs-parent="#sidebar"
+        >
+          <li class="sidebar-item">
+            <a href="../Reception/letter-manager.html" class="sidebar-link"
+            >Letter Manager</a
+            >
+          </li>
+          <li class="sidebar-item">
+            <a href="../Reception/inquiries-manager.html" class="sidebar-link"
+            >Inquiries Manager</a
+            >
+          </li>
+        </ul>
+      </li>
+
+      <li class="sidebar-item">
+        <a
+                href="../QuestionBank/add-mcqs-question.html"
+                class="sidebar-link collapsed has-dropdown"
+                data-bs-toggle="collapse"
+                data-bs-target="#question-bank"
+                aria-expanded="false"
+                aria-controls="question-bank"
+        >
+          <i class="fa-solid fa-clipboard-question"></i>
+          <span>Question Bank</span>
+        </a>
+        <ul
+                id="question-bank"
+                class="sidebar-dropdown list-unstyled collapse"
+                data-bs-parent="#sidebar"
+        >
+          <li class="sidebar-item">
+            <a href="../QuestionBank/add-mcqs-question.html" class="sidebar-link"
+            >Add MCQ
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="../QuestionBank/add-true-false-question.html" class="sidebar-link"
+            >Add True/False</a
+            >
+          </li>
+          <li class="sidebar-item">
+            <a href="../QuestionBank/generate-question.html" class="sidebar-link"
+            >Generate</a
+            >
+          </li>
+          <li class="sidebar-item">
+            <a href="../QuestionBank/set-header.html" class="sidebar-link">Set Header </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="../QuestionBank/active-deactive.html" class="sidebar-link"
+            >Active/Deactivate</a
+            >
+          </li>
+          <li class="sidebar-item">
+            <a href="../QuestionBank/exam-report.html" class="sidebar-link">Exam Report</a>
+          </li>
+          <li class="sidebar-item">
+            <a href="../QuestionBank/report-card.html" class="sidebar-link">Report Card</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="sidebar-item">
+        <a
+                href="../LMS/learning-lms.html"
+                class="sidebar-link collapsed has-dropdown"
+                data-bs-toggle="collapse"
+                data-bs-target="#lms"
+                aria-expanded="false"
+                aria-controls="lms"
+        >
+          <i class="fa-solid fa-book-atlas"></i>
+          <span>LMS</span>
+        </a>
+        <ul
+                id="lms"
+                class="sidebar-dropdown list-unstyled collapse"
+                data-bs-parent="#sidebar"
+        >
+          <li class="sidebar-item">
+            <a href="../LMS/learning-lms.html" class="sidebar-link"
+            >Learning LMS
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="../LMS/view-notes.html" class="sidebar-link">View Notes</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="sidebar-item">
+        <a
+                href="../Files/upload-assignment.html"
+                class="sidebar-link collapsed has-dropdown"
+                data-bs-toggle="collapse"
+                data-bs-target="#upload-download"
+                aria-expanded="false"
+                aria-controls="upload-download"
+        >
+          <i class="fa-solid fa-cloud-arrow-up"></i>
+          <span>Upload Files</span>
+        </a>
+        <ul
+                id="upload-download"
+                class="sidebar-dropdown list-unstyled collapse"
+                data-bs-parent="#sidebar"
+        >
+          <li class="sidebar-item">
+            <a href="../Files/upload-assignment.html" class="sidebar-link"
+            >Assignment
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="../Files/download-assignment.html" class="sidebar-link"
+            >Download</a
+            >
+          </li>
+        </ul>
+      </li>
+
+      <li class="sidebar-item">
+        <a
+                href="../EMI/remove.html"
+                class="sidebar-link collapsed has-dropdown"
+                data-bs-toggle="collapse"
+                data-bs-target="#emi"
+                aria-expanded="false"
+                aria-controls="emi"
+        >
+          <i class="fa-solid fa-credit-card"></i>
+          <span>EMI</span>
+        </a>
+        <ul
+                id="emi"
+                class="sidebar-dropdown list-unstyled collapse"
+                data-bs-parent="#sidebar"
+        >
+          <li class="sidebar-item">
+            <a href="../EMI/remove.html" class="sidebar-link">Remove EMI</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="sidebar-item">
+        <a href="../Reports/report.html" class="sidebar-link">
+          <i class="fa-solid fa-chart-pie"></i>
+          <span>Report</span>
+        </a>
+      </li>
+
+      <li class="sidebar-item">
+        <a href="../login.html" class="sidebar-link">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <span>Logout</span>
+        </a>
+      </li>
+    </ul>
+  </aside>
+  <div class="main">
+    <nav class="navbar navbar-expand px-4 py-3">
+      <div class="navbar-collapse collapse">
+                    <div class="navbar-nav ms-auto" style="font-size:32px;color: var(--dark-blue);font-family: 'Economica', sans-serif;">S.M.K Institute of Nursing Shikarpur</div>
+            <ul class="navbar-nav ms-auto">
+          <li class="nav-item dropdown">
+            <a href="javascript: void(0)" data-bs-toggle="dropdown" class="nav-icon pe-md-0">
+              <img
+                      src="../images/NoGender.png"
+                      class="avatar img-fluid"
+                      alt=""
+              />
+            </a>
+            <div class="dropdown-menu dropdown-menu-end rounded">
+              <a href="javascript: void(0)" class="dropdown-item">
+                <i class="fa-solid fa-user"></i>
+                Profile
+              </a>
+              <a href="javascript: void(0)" class="dropdown-item">
+                <i class="fa-solid fa-gear"></i>
+                Setting
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="../login.html" class="dropdown-item">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <main class="content px-3 py-4">
+      <div class="container" id="content">
+        <!-- Back Button -->
+        <div class="mb-4" style="text-align: right;">
+          <a href="../Finance/expenses.html" class="btn btn-primary" >
+            <i class="fa-solid fa-arrow-left"></i>
+          </a>
+        </div>
+
+        <!-- Expenses Section -->
+        <div class="mb-3">
+          <div class="row card shadow-sm mb-4 profile-card card-body"><h3 class="card-title fw-bold fs-4" style="text-align: center;margin-bottom: 0;">Expenses Report</h3></div>
+
+          <div class="row">
+            <div class="col-12">
+
+
+              <div class="card shadow-sm question-card">
+                <div class="card-body">
+
+                  <form class="row g-3" action="" onsubmit="return AddForm();" method="post">
+                    <!-- Transaction Section -->
+                    <div class="col-md-6 col-lg-4 input-wrap">
+                      <label for="from-date" class="form-label">From</label>
+                      <input type="date" class="input-field" id="from-date">
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 input-wrap">
+                      <label for="to-date" class="form-label">To</label>
+                      <input type="date" class="input-field" id="to-date">
+                    </div>
+
+                    <div class="col-12 col-lg-4 d-flex align-items-center">
+                      <button type="submit" class="btn btn-primary w-100">Generate Report</button>
+                    </div>
+                  </form>
+
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="footer">
+      ©&nbsp;2024 -  S.M.K Institute of Nursing Shikarpur &nbsp;|&nbsp;
+      <a href="javascript: void(0)" >Terms &amp; Conditions</a>&nbsp;|&nbsp;
+      <a href="javascript: void(0)" >Privacy Policy</a>&nbsp;|&nbsp;
+      <a href="javascript: void(0)" >Contact Us</a>&nbsp;|&nbsp;
+      <a href="javascript: void(0)" >Developed By Mehran IT Consultancy</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>
