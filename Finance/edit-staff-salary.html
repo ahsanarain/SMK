@@ -489,15 +489,16 @@
     </nav>
     <main class="content px-3 py-4">
       <div class="container" id="content">
-        <!-- Back Button -->
-        <div class="mb-4" style="text-align: right;">
-          <a href="../Finance/staff-salary.html" class="btn btn-primary" >
-            <i class="fa-solid fa-arrow-left"></i>
-          </a>
+        <div class="card shadow-sm mb-2 profile-card card-body">
+          <div class="row">
+            <div class="col-md-7"><h3 class="card-title fw-bold fs-4" style="text-align: right;margin-bottom: 0;">Update Staff Salary</h3></div>
+            <div class="col-md-5" style="text-align: right;">
+              <a href="../Finance/staff-salary.html" class="btn btn-primary" >
+                <i class="fa-solid fa-arrow-left"></i>
+              </a>
+            </div>
+          </div>
         </div>
-
-        <div class="row card shadow-sm mb-4 profile-card card-body"><h3 class="card-title fw-bold fs-4" style="text-align: center;margin-bottom: 0;">Update Staff Salary</h3></div>
-
 
         <div class="card shadow-sm question-card">
           <div class="card-body">
@@ -506,7 +507,7 @@
               <div class="row g-3">
 
                 <!-- Staff Name -->
-                <div class="col-md-6">
+                <div class="col-md-6 input-wrap">
                   <label for="staff_name" class="form-label"><strong>Staff Name</strong></label>
                   <select class="input-field" id="staff_name" name="staff_name" required>
                     <option value="" selected disabled>Select Staff</option>
@@ -515,7 +516,7 @@
                 </div>
 
                 <!-- Month -->
-                <div class="col-md-6">
+                <div class="col-md-6 input-wrap">
                   <label for="month" class="form-label"><strong>Month</strong></label>
                   <select class="input-field" id="month" name="month" required>
                     <option value="" selected disabled>Select Month</option>

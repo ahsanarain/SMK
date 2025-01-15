@@ -487,23 +487,26 @@
     </nav>
     <main class="content px-3 py-4">
       <div class="container" id="content">
-        <!-- Back Button -->
-        <div class="mb-4" style="text-align: right;" xmlns="http://www.w3.org/1999/html">
-          <a href="../Attendance/add-clinical.html" class="btn btn-primary" >
-            <i class="fa-solid fa-arrow-left"></i>
-          </a>
-        </div>
         <!-- Fees Section -->
         <div class="mb-3">
-          <div class="row card shadow-sm mb-4 profile-card card-body"><h3 class="card-title fw-bold fs-4" style="text-align: center;margin-bottom: 0;">Clinical</h3></div>
+          <div class="card shadow-sm mb-2 profile-card card-body">
+            <div class="row">
+              <div class="col-md-7"><h3 class="card-title fw-bold fs-4" style="text-align: right;margin-bottom: 0;">Clinical</h3></div>
+              <div class="col-md-5" style="text-align: right;">
+                <a href="../Attendance/add-clinical.html" class="btn btn-primary" >
+                  <i class="fa-solid fa-arrow-left"></i>
+                </a>
+              </div>
+            </div>
+          </div>
 
-          <div class="row card shadow-sm mb-4 profile-card card-body" style="flex-direction:row;">
+          <div class="row card shadow-sm mb-2 profile-card card-body" style="flex-direction:row;">
             <h3 class="col-4 card-title fw-bold fs-4" style="text-align: center;margin-bottom: 0;">Generic BSN</h3>
             <h3 class="col-4 card-title fw-bold fs-4" style="text-align: center;margin-bottom: 0;">GBSN-2021-24</h3>
             <h3 class="col-4 card-title fw-bold fs-4" style="text-align: center;margin-bottom: 0;">DATED 01-10-2024</h3>
           </div>
 
-          <div class="card shadow-sm mb-4 row">
+          <div class="card shadow-sm mb-2 row">
             <div class="card-body col-12">
               <!-- DataTable -->
               <form onsubmit="return AddForm();" action="" method="POST" enctype="multipart/form-data" id="form">
