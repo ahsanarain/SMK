@@ -344,7 +344,6 @@ a:hover{
   transition: 0.4s;
   cursor: pointer;
   color: #000;
-  margin-bottom: 1rem;
   border-top: 1px solid #e1e1e1;
   border-radius: 2px 2px 2px 2px;
   -webkit-box-shadow: 0 1px 2px #777;
