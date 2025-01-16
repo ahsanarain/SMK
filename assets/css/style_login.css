@@ -190,6 +190,9 @@ a:hover {
     .container {
         grid-gap: 5rem;
     }
+    body {
+        overflow: scroll;
+    }
 }
 
 @media screen and (max-width: 1000px) {
@@ -204,6 +207,10 @@ a:hover {
 
     .img img {
         width: 400px;
+    }
+
+    body {
+        overflow: scroll;
     }
 }
 
@@ -222,5 +229,8 @@ a:hover {
 
     .login-content {
         justify-content: center;
+    }
+    body {
+        overflow: scroll;
     }
 }
