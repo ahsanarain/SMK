@@ -1,10 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
 :root {
-  --blue: #485087;
-  --dark-blue: #2f376e;
-  --white: #fff;
-  --black: #000;
+  --normal: #485087;
+  --dark: #2f376e;
   --light:#5d6495;
 }
 
@@ -56,8 +54,8 @@ div.dt-container .dt-paging .dt-paging-button{
 }
 
 .table-primary th{
-  background-color: var(--blue);
-  color: var(--white);
+  background-color: var(--normal);
+  color: #fff;
   padding: 3px !important;
 }
 
@@ -105,7 +103,7 @@ div.dt-container .dt-paging .dt-paging-button{
   border-radius: 3px 3px 3px 3px;
   box-shadow: 0 0.5px 0 0 #ffffff inset, 0 1px 2px 0 #B3B3B3;
   padding: 10px 10px 10px 10px;
-  border-top: var(--dark-blue) 2px solid;
+  border-top: var(--dark) 2px solid;
 }
 
 .footer
@@ -136,7 +134,7 @@ div.dt-container .dt-paging .dt-paging-button{
   width: 100%;
   overflow: hidden;
   transition: all 0.35s ease-in-out;
-  background-color: var(--white);
+  background-color: #fff;
   min-width: 0;
 }
 
@@ -145,7 +143,7 @@ div.dt-container .dt-paging .dt-paging-button{
   min-width: 60px;
   z-index: 1000;
   transition: all 0.25s ease-in-out;
-  background-color: #485087;
+  background-color: var(--normal);
   display: flex;
   flex-direction: column;
 }
@@ -164,7 +162,7 @@ div.dt-container .dt-paging .dt-paging-button{
 
 .toggle-btn i, .toggle-btn svg {
   font-size: 1.5rem;
-  color: var(--white);
+  color: #fff;
 }
 
 .sidebar-logo {
@@ -172,7 +170,7 @@ div.dt-container .dt-paging .dt-paging-button{
 }
 
 .sidebar-logo a {
-  color: var(--white);
+  color: #fff;
   font-size: 1.15rem;
   font-weight: 600;
 }
@@ -226,7 +224,7 @@ div.dt-container .dt-paging .dt-paging-button{
 
 a.sidebar-link {
   padding: 10px;
-  color: var(--white);
+  color: #fff;
   display: block;
   font-size: 0.9rem;
   white-space: nowrap;
@@ -241,7 +239,7 @@ a.sidebar-link {
 
 a.sidebar-link:hover {
   background-color: rgba(255, 255, 255, 0.075);
-  border-left: 3px solid var(--dark-blue);
+  border-left: 3px solid var(--dark);
 }
 
 .sidebar-item {
@@ -252,7 +250,7 @@ a.sidebar-link:hover {
   position: absolute;
   top: 0;
   left: 60px;
-  background: #485087 !important;
+  background: var(--normal) !important;
   padding: 0;
   min-width: 15rem;
   display: none;
@@ -286,39 +284,39 @@ a.sidebar-link:hover {
   height:0.5rem;
 }
 i, svg{
-  color: var(--dark-blue);
+  color: var(--dark);
 }
 
 .btn-primary i, .btn-primary svg, .sidebar-link i, .sidebar-link svg
 {
-  color: var(--white);
+  color: #fff;
 }
 
 .sidebar-link span, a.sidebar-link:hover
 {
-  color: var(--white);
+  color: #fff;
 }
 
 .dropdown-item.active, .dropdown-item:active
 {
-  color: var(--black);
+  color: #000;
 }
 
 a{
-  color: var(--white);
+  color: #fff;
 }
 a:hover{
-  color: var(--blue);
+  color: var(--normal);
 }
 .dropdown-item:hover{
   background-color: var(--light);
 }
 .progress-bar{
-  background-color:var(--blue);
+  background-color:var(--normal);
 }
 
 .navbar {
-  background-color: var(--white);
+  background-color: #fff;
   box-shadow: 0 0 2rem 0 rgba(33, 37, 41, 0.1);
   border-bottom: 1px solid #b9b9b9;
 }
@@ -342,10 +340,10 @@ a:hover{
 }
 
 .card {
-  background-color: var(--white);
+  background-color: #fff;
   transition: 0.4s;
   cursor: pointer;
-  color: var(--black);
+  color: #000;
   margin-bottom: 1rem;
   border-top: 1px solid #e1e1e1;
   border-radius: 2px 2px 2px 2px;
@@ -354,13 +352,13 @@ a:hover{
   box-shadow: 0 0.5px 0 0 #ffffff inset, 0 1px 2px 0 #B3B3B3;
 }
 .card:hover {
-  color: var(--black);
+  color: #000;
 }
 .question-card:hover,
 .registration-card:hover,
 .profile-card:hover {
-  color: var(--black);
-  background-color: var(--white);
+  color: #000;
+  background-color: #fff;
   transform: translateY(0px);
   cursor: revert;
 }
@@ -370,11 +368,11 @@ a:hover{
 }
 
 footer {
-  background-color: var(--white);
+  background-color: #fff;
   padding: 1rem 0;
   text-align: center;
   width: 100%;
-  color: var(--black);
+  color: #000;
   font-size: 0.9rem;
   margin-top: auto;
 }
@@ -392,11 +390,11 @@ footer {
     color: #3e4455;
   }
   .form-control:placeholder {
-    background-color: var(--white);
+    background-color: #fff;
   }
   .input-group-navbar .btn {
-    background-color: #485087;
-    color: var(--white);
+    background-color: var(--normal);
+    color: #fff;
     cursor: pointer;
     z-index: 1000;
   }
@@ -427,22 +425,22 @@ footer {
 
 /* Button styling */
 .btn-primary {
-  background-color: var(--blue); /* or #007bff if not using CSS variables */
+  background-color: var(--normal); /* or #007bff if not using CSS variables */
   border: none;
   color: #fff;
   transition: background-color 0.2s ease-in-out;
 }
 
 .btn-primary:hover {
-  background-color: var(--dark-blue); /* or #0056b3 if not using CSS variables */
+  background-color: var(--dark); /* or #0056b3 if not using CSS variables */
 }
 
 .btn-primary:active{
-  background-color: var(--dark-blue) !important;
+  background-color: var(--dark) !important;
 }
 
 button.btn-secondary svg, button.btn-success svg, button.btn-danger svg{
-  color: var(--white);
+  color: #fff;
 }
 
 .btn-secondary {
@@ -478,7 +476,7 @@ td button.btn-outline-warning:active, td button.btn-outline-success:active,td di
   /* Align content in table cells */
 }
 .table td {
-  background: var(--white);
+  background: #fff;
 }
 
 .table-responsive {
@@ -514,21 +512,21 @@ td a.btn-sm{
 
 td div button.btn-sm:hover, td button.btn-sm:hover, td div a.btn-sm:hover, td a.btn-sm:hover{
   svg{
-    color: var(--white) !important;
+    color: #fff !important;
   }
 }
 
 td div button.btn:hover, td button.btn:hover, td div a.btn:hover, td a.btn:hover{
-  background-color: var(--dark-blue) !important;
+  background-color: var(--dark) !important;
 }
 
 td div button.btn, td button.btn, td div a.btn, td a.btn{
   svg{
-    color: var(--white) !important;
+    color: #fff !important;
   }
-  color: var(--white) !important;
+  color: #fff !important;
   border: none !important;
-  background-color: var(--blue) !important;
+  background-color: var(--normal) !important;
 }
 
 /* Calendar styling */
@@ -594,7 +592,7 @@ form, p strong, p span,input
 
 .input-field:focus
 {
-  border-bottom-color: #2f376e;
+  border-bottom-color: var(--dark);
 }
 
 html{
@@ -715,7 +713,7 @@ body::-webkit-scrollbar-thumb {
   width: calc(calc(1.2rem* .8)* 2);
 }
 .switch input:checked + label::before {
-  background-color: var(--dark-blue);
+  background-color: var(--dark);
 }
 .switch input + label::before {
   right: 0;
