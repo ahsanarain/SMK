@@ -215,7 +215,7 @@ div.dt-container .dt-paging .dt-paging-button{
 }
 
 .sidebar-logo img {
-  max-width: 120px; /* Adjust logo size */
+  max-width: 150px; /* Adjust logo size */
   height: auto; /* Maintain aspect ratio */
   margin: 0 auto; /* Center the image */
   display: block; /* Ensure image is block-level */
