@@ -330,7 +330,7 @@ a:hover{
   width: 40px;
 }
 
-.dt-search
+.dt-search, .dt-length
 {
   padding: 5px !important;
 }

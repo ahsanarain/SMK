@@ -10821,7 +10821,7 @@
 			 * with a default select list of 10, 25, 50 and 100, and can be replaced
 			 * with a custom select box if required.
 			 */
-			"sLengthMenu": "",
+			"sLengthMenu": "_MENU_",
 	
 	
 			/**
@@ -13484,14 +13484,7 @@
 		var end = opts.text.match(/_MENU_$/);
 		var start = opts.text.match(/^_MENU_/);
 		var removed = opts.text.replace(/_MENU_/, '');
-		var str = '<label>' + opts.text + '</label>';
-	
-		if (start) {
-			str = '_MENU_<label>' + removed + '</label>';
-		}
-		else if (end) {
-			str = '<label>' + removed + '</label>_MENU_';
-		}
+		var str = '_MENU_';
 	
 		// Wrapper element - use a span as a holder for where the select will go
 		var tmpId = 'tmp-' + (+new Date())
@@ -13503,14 +13496,6 @@
 	
 		// Save text node content for macro updating
 		var textNodes = [];
-		div.find('label')[0].childNodes.forEach(function (el) {
-			if (el.nodeType === Node.TEXT_NODE) {
-				textNodes.push({
-					el: el,
-					text: el.textContent
-				});
-			}
-		})
 	
 		// Update the label text in case it has an entries value
 		var updateEntries = function (len) {
@@ -13536,9 +13521,9 @@
 		}
 	
 		// add for and id to label and input
-		div.find('label').attr('for', 'dt-length-' + __lengthCounter);
-		select.attr('id', 'dt-length-' + __lengthCounter);
-		__lengthCounter++;
+		// div.find('label').attr('for', 'dt-length-' + __lengthCounter);
+		// select.attr('id', 'dt-length-' + __lengthCounter);
+		// __lengthCounter++;
 	
 		// Swap in the select list
 		div.find('#' + tmpId).replaceWith(select);
